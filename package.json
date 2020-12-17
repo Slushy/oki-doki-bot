@@ -1,0 +1,19 @@
+{
+  "name": "oki-doki-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for sending insults to the meme team",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Brandon Porter <brandon.porter18@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "indefinite": "^2.4.1",
+    "node-schedule": "^1.3.2"
+  }
+}
