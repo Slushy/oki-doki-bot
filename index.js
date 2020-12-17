@@ -21,6 +21,7 @@ const getInsults = async (users) => {
     let userMessages = [];
     for (userId of users) {
         userMessages.push(await getInsult(userId));
+        await new Promise(resolve => setTimeout(resolve, 5000));
     }
 
     return userMessages;
@@ -38,7 +39,7 @@ client.on('ready', () => {
     // │    │    └─────────────── hour (0 - 23)
     // │    └──────────────────── minute (0 - 59)
     // └───────────────────────── second (0 - 59, OPTIONAL)
-    schedule.scheduleJob('0 0 8 * * *', async () => {
+    schedule.scheduleJob('0 12 19 * * *', async () => {
         const channel = client.channels.get(process.env.CHANNEL);
 
         try {
