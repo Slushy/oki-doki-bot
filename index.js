@@ -1,4 +1,6 @@
 require('dotenv').config();
+const path = require('path');
+const express = require('express');
 const axios = require('axios');
 const schedule = require('node-schedule');
 const Discord = require('discord.js');
@@ -45,3 +47,9 @@ client.on('message', async msg => {
 });
 
 client.login(process.env.TOKEN);
+
+// server
+const PORT = process.env.PORT || 5000;
+express()
+    .use(express.static(path.join(__dirname, 'public')))
+    .listen(PORT, () => console.log(`Listening on ${PORT}`));
