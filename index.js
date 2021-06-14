@@ -58,7 +58,7 @@ client.on('message', async msg => {
         try {
             channelMessage = await getInsult(msg.author.id);
         } catch {
-            channelMessage = 'I\'m all out of insults. bitch.';
+            channelMessage = 'I\'m all out of insults.';
         }
 
         msg.channel.send(channelMessage);
